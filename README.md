@@ -1,10 +1,3 @@
-# Scripts-Utiles-Excel
-collection de scripts personnalisés conçus pour augmenter l'efficacité et la productivité lors de l'utilisation d'Excel
-
-Pour créer un repository GitHub dédié à vos scripts utiles pour Excel, voici une courte description que vous pourriez utiliser, intégrant la syntaxe Markdown pour une présentation optimisée :
-
----
-
 # Scripts Utiles pour Excel
 
 Ce repository contient une collection de scripts personnalisés conçus pour augmenter l'efficacité et la productivité lors de l'utilisation d'Excel. Ces scripts couvrent une gamme de fonctionnalités allant de l'automatisation de tâches répétitives à l'analyse et au traitement avancés des données. Ils sont principalement écrits pour être utilisés dans Excel version française, mais peuvent être adaptés pour d'autres langues avec de légères modifications.
