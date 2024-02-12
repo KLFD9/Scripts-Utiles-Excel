@@ -1,0 +1,14 @@
+//
+
+function convertKgToGrams() {
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("CSV_03"); // Changer par le nom du fichier
+  var columnP = sheet.getRange("P2:P" + sheet.getLastRow()); // Changer pour la bonne colonne ( commence a la ligne 2 pour l'entete)
+  var values = columnP.getValues();
+  
+  for (var i = 0; i < values.length; i++) {
+    if (values[i][0] !== "") { 
+      values[i][0] = values[i][0] * 1000;
+    }
+  }
+  columnP.setValues(values);
+}
