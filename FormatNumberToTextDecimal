@@ -1,0 +1,27 @@
+Sub FormatNumbersAsText()
+    Dim ws As Worksheet
+    Dim lastRow As Long, i As Long
+    Dim value As Double
+    Dim formattedValue As String
+    
+    Set ws = ThisWorkbook.Sheets("NomDeMonOngletExcel") ' Mettre le bon nom de l'onglet excel
+    lastRow = ws.Cells(ws.Rows.Count, "U").End(xlUp).Row ' Trouvez la dernière ligne avec des données dans la colonne U (ou V si c'est plus long)
+    
+    ' Parcour les colonnes U et V
+    For i = 2 To lastRow ' Commence à la ligne 2 pour ignorer l'en-tête
+        ' Colonne U
+        If ws.Cells(i, "U").value <> "" Then
+            value = ws.Cells(i, "U").value
+            formattedValue = Format(value, "0.00")
+            formattedValue = Replace(formattedValue, ",", ".")
+            ws.Cells(i, "U").value = formattedValue
+        End If
+        
+        ' Colonne V
+        If ws.Cells(i, "V").value <> "" Then
+            value = ws.Cells(i, "V").value
+            formattedValue = Format(value, "0.00")
+            formattedValue = Replace(formattedValue, ",", ".")
+            ws.Cells(i, "V").value = formattedValue
+        End If
+    Next i
